@@ -10,7 +10,3 @@ li {
   text-decoration: underline;
   color: blue;
 }
-
-li:visited {
-  color: purple;
-}

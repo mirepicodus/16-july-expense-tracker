@@ -25,6 +25,14 @@ var loadList = function(currentCategory) {
   $('#total').text(currentCategory.total());
 };
 
+var calculateGrandTotal = function (amounts) {
+  var total = 0;
+  amounts.forEach(function(amount) {
+    total += amount;
+  });
+  return total;
+};
+
 $(document).ready(function() {
   var currentCategory;
 
@@ -57,7 +65,7 @@ $(document).ready(function() {
     currentCategory.purchases.push(purchase);
     $('tbody#purchases-list').prepend("<tr><td>" + purchase.description + "</td><td>" + purchase.amount + "</td></tr>");
     $('#total').text(currentCategory.total());
-    console.log(currentCategory.purchaseAmounts);
+    $('#grand-total').text(calculateGrandTotal(currentCategory.purchaseAmounts));
   });
 
 });
