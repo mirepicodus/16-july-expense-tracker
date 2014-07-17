@@ -1,0 +1,16 @@
+/*#total {
+  text-align: left;
+}*/
+
+li:hover {
+  cursor: pointer;
+}
+
+li {
+  text-decoration: underline;
+  color: blue;
+}
+
+li:visited {
+  color: purple;
+}
